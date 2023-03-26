@@ -1,1 +1,0 @@
-# nauka-gita-2
