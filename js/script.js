@@ -63,18 +63,18 @@ else( computerMove == 'nożyce' && playerMove == 'papier'){
     printMessage('Ty przegrywasz');
 }
 
-if( computerMove == 'kamień' && playerMove == 'kamień'){
+else if( computerMove == 'kamień' && playerMove == 'kamień'){
     printMessage('Remis');
 }
 
-if( computerMove == 'papier' && playerMove == 'papier'){
+else if( computerMove == 'papier' && playerMove == 'papier'){
     printMessage('Remis');
 }
 
-if( computerMove == 'nożyce' && playerMove == 'nożyce'){
+else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
     printMessage('Remis');
 }
 
-if( computerMove == "nożyce" && playerMove == "nieznany ruch"){
+else if( computerMove == "nożyce" && playerMove == "nieznany ruch"){
     printMessage('Walkower');
 }
