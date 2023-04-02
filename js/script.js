@@ -1,8 +1,17 @@
+function getMoveName(argMoveId){
+    if(argMoveId == 1){
+      return 'kamień';
+    } else {
+      printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+      return 'nieznany ruch';
+    }
+}
+
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-let computerMove = 'nieznany ruch';
+let computerMove = getMoveName(randomNumber);
 
 if( randomNumber == 1){
   computerMove = 'kamień';
@@ -29,11 +38,11 @@ if( playerInput == '1'){
   playerMove = 'kamień';
 }
 
-else if( playerInput == '2'){
+if( playerInput == '2'){
     playerMove = 'papier';
 }
 
-else if( playerInput == '3'){
+if( playerInput == '3'){
     playerMove = 'nożyce';
 }
 
@@ -43,7 +52,7 @@ if( computerMove == 'kamień' && playerMove == 'papier'){
     printMessage('Ty wygrywasz!');
 }
 
-else( computerMove == 'papier' && playerMove == 'kamień'){
+if( computerMove == 'papier' && playerMove == 'kamień'){
     printMessage('Ty przegrywasz');
 }
 
@@ -51,7 +60,7 @@ if( computerMove == 'nożyce' && playerMove == 'kamień'){
     printMessage('Ty wygrywasz');
 }
 
-else( computerMove == 'kamień' && playerMove == 'nożyce'){
+if( computerMove == 'kamień' && playerMove == 'nożyce'){
     printMessage('Ty przegrywasz');
 }
 
@@ -59,22 +68,22 @@ if( computerMove == 'papier' && playerMove == 'nożyce'){
     printMessage('Ty wygrywasz');
 }
 
-else( computerMove == 'nożyce' && playerMove == 'papier'){
+if( computerMove == 'nożyce' && playerMove == 'papier'){
     printMessage('Ty przegrywasz');
 }
 
-else if( computerMove == 'kamień' && playerMove == 'kamień'){
+if( computerMove == 'kamień' && playerMove == 'kamień'){
     printMessage('Remis');
 }
 
-else if( computerMove == 'papier' && playerMove == 'papier'){
+if( computerMove == 'papier' && playerMove == 'papier'){
     printMessage('Remis');
 }
 
-else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
+if( computerMove == 'nożyce' && playerMove == 'nożyce'){
     printMessage('Remis');
 }
 
-else if( computerMove == "nożyce" && playerMove == "nieznany ruch"){
-    printMessage('Walkower');
+if( computerMove == "nieznany ruch" && playerMove == "nieznany ruch"){
+    printMessage('Jeszcze raz');
 }
